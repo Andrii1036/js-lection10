@@ -6,14 +6,153 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            overflow-x: hidden;
+        }
+        
+        .active {
+            display: none;
+        }
+        
+        button {
+            cursor: pointer;
+        }
+        
+        .popup {
+            background-color: #555;
+            visibility: hidden;
+            width: 260px;
+            border-radius: 6px;
+            padding: 8px 0;
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 20px;
+        }
+        
+        .showPopup {
+            visibility: visible;
+            animation: show 1s;
+        }
+        
+        @keyframes show {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        .header {
+            display: flex;
+            height: 50px;
+            background-color: grey;
+            justify-content: flex-end;
+            padding: 5px 10px;
+            margin-bottom: 15px;
+            align-items: center;
+            position: relative;
+        }
+        
+        .burger {
+            cursor: pointer;
+        }
+        
+        .burger p {
+            width: 50px;
+            height: 5px;
+            border-radius: 7px;
+            background-color: black;
+            position: relative;
+        }
+        
+        .burger p::before,
+        .burger p::after {
+            content: '';
+            width: 50px;
+            height: 5px;
+            background-color: black;
+            border-radius: 7px;
+            position: absolute;
+            top: 10px;
+            left: 0;
+        }
+        
+        .burger p::after {
+            left: 0;
+            top: -10px;
+        }
+        
+        .menu {
+            width: 100%;
+            position: absolute;
+            top: 50px;
+            right: -120%;
+            background-color: grey;
+            border: 1px solid black;
+            z-index: 2;
+            transition: all 1s;
+        }
+        
+        .showMenu {
+            transition: all 1s;
+            right: 0;
+        }
+        
+        .menu_items {
+            list-style: none;
+            padding: 15px 10px;
+        }
+        
+        .menu_item {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        
+        .showPost {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
-
+    <header class="header">
+        <div class="burger" onclick="showHideMenu()">
+            <p></p>
+        </div>
+        <nav class="menu">
+            <ul class="menu_items">
+                <li class="menu_item"><a href='#'>Пункт меню</a></li>
+                <li class="menu_item"><a href='#'>Пункт меню</a></li>
+                <li class="menu_item"><a href='#'>Пункт меню</a></li>
+                <li class="menu_item"><a href='#'>Пункт меню</a></li>
+                <li class="menu_item"><a href='#'>Пункт меню</a></li>
+                <li class="menu_item"><a href='#'>Пункт меню</a></li>
+                <li class="menu_item"><a href='#'>Пункт меню</a></li>
+                <li class="menu_item"><a href='#'>Пункт меню</a></li>
+                <li class="menu_item"><a href='#'>Пункт меню</a></li>
+                <li class="menu_item"><a href='#'>Пункт меню</a></li>
+                <li class="menu_item"><a href='#'>Пункт меню</a></li>
+                <li class="menu_item"><a href='#'>Пункт меню</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <!-- розкоментовуйте скріпти по-одному бо можуть бути конфлікти назв -->
-    <script src="js/additional.js"></script>
-    <script src="js/classwork.js"></script>
+    <!-- <script src="js/additional.js"></script>
+    <script src="js/classwork.js"></script> -->
     <script src="js/homework.js"></script>
 </body>
 
