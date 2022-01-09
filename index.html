@@ -9,6 +9,8 @@
     <style>
         * {
             box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
         
         body {
@@ -124,6 +126,71 @@
         .showPost {
             display: none;
         }
+        
+        .my {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+        
+        .divWrapper {
+            display: flex;
+            gap: 5px;
+            flex-wrap: wrap;
+            background: yellow;
+        }
+        
+        .slider {
+            margin-top: 15px;
+        }
+        
+        .slider_items {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            gap: 10px;
+            overflow: hidden;
+            position: relative;
+            height: 300px;
+        }
+        
+        .slider_item {
+            display: flex;
+            min-width: 200px;
+            height: 200px;
+            background: chocolate;
+            border: 1px solid black;
+            opacity: 0.5;
+            align-items: center;
+            justify-content: center;
+            font-size: 100px;
+            position: relative;
+            transition: all 1s;
+        }
+        
+        .slider_item-active {
+            opacity: 1;
+            position: absolute;
+            min-width: 300px;
+            height: 300px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            transition: min-width 1s, height 1s, opacity 1s;
+        }
+        
+        .slider_arrows {
+            display: flex;
+            justify-content: center;
+            font-size: 50px;
+            gap: 20px;
+        }
+        
+        .slider_arrows p {
+            cursor: pointer;
+        }
     </style>
 </head>
 
@@ -149,11 +216,66 @@
             </ul>
         </nav>
     </header>
+    <div class="divWrapper someClass" id='divWrapper'>
+        <div class="my" id='1'>
+            <p> <span>QWEERRTTTY</span> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi placeat facilis magni! Aliquid, quisquam deleniti.</p>
+        </div>
+        <div class="my" id='12'>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit sequi quia magnam, itaque aliquam ut?</p>
+        </div>
+        <div class="my" id='13'>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit sequi quia magnam, itaque aliquam ut?</p>
+        </div>
+        <div class="my" id='14'>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit sequi quia magnam, itaque aliquam ut?</p>
+        </div>
+        <div class="my" id='15'>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit sequi quia magnam, itaque aliquam ut?</p>
+        </div>
+        <div class="my" id='16'>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit sequi quia magnam, itaque aliquam ut?</p>
+        </div>
+        <div class="my" id='17'>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit sequi quia magnam, itaque aliquam ut?</p>
+        </div>
+        <div class="my" id='18'>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit sequi quia magnam, itaque aliquam ut?</p>
+        </div>
+        <div class="my" id='19'>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit sequi quia magnam, itaque aliquam ut?</p>
+        </div>
+    </div>
+
+    <div class="slider">
+        <div class="slider_items">
+            <div class="slider_item slider_item-active">1</div>
+            <div class="slider_item">2</div>
+            <div class="slider_item">3</div>
+            <div class="slider_item">4</div>
+            <div class="slider_item">5</div>
+            <div class="slider_item">6</div>
+            <div class="slider_item">7</div>
+            <div class="slider_item">8</div>
+            <div class="slider_item">9</div>
+            <div class="slider_item">10</div>
+            <div class="slider_item">11</div>
+            <div class="slider_item">12</div>
+            <div class="slider_item">13</div>
+            <div class="slider_item">14</div>
+            <div class="slider_item">15</div>
+        </div>
+        <div class="slider_arrows">
+            <p id="lefthArrow">&#x2190</p>
+            <p id="rightArrow">&#x2192</p>
+        </div>
+    </div>
 
     <!-- розкоментовуйте скріпти по-одному бо можуть бути конфлікти назв -->
-    <!-- <script src="js/additional.js"></script> -->
-    <script src="js/classwork.js"></script>
+    <script src="js/additional.js"></script>
+    <!-- <script src="js/classwork.js"></script> -->
     <!-- <script src="js/homework.js"></script> -->
+    <!-- <script src="js/infoAboutEveryTag.js"></script> -->
+    <!-- <script src="js/popUpInfoAboutTag.js"></script> -->
 </body>
 
 </html>
